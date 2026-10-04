@@ -1,0 +1,465 @@
+/* Mengatur ulang margin, padding, dan ukuran semua elemen. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Menentukan warna yang digunakan dalam website. */
+:root {
+    --navy: #6774da;
+    --navy-muda: #354361;
+
+    --burgundy: #691e2d;
+    --wine: #610610;
+
+    --cream: #f5e9d0;
+    --putih: #FFFFFF;
+
+    --teks: #2737e9;
+    --abu: #9797a0;
+
+    --garis: #ce8429;
+}
+
+
+/* Mengatur jenis font, warna teks, dan warna background halaman. */
+body {
+    font-family:
+        Georgia,
+        'Times New Roman',
+        Times,
+        serif;
+
+    background-color: var(--cream);
+
+    color: var(--teks);
+}
+
+
+/* Mengatur ukuran dan tampilan bagian utama halaman. */
+.container {
+    min-height: 100vh;
+
+    padding: 40px 20px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--burgundy)
+        );
+}
+
+
+/* Mengatur ukuran, posisi, warna, dan bayangan kartu to-do list. */
+.todo-card {
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    padding: 40px;
+
+    background-color: var(--cream);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(170, 26, 26, 0.25);
+}
+
+
+/* Mengatur posisi dan jarak pada bagian header. */
+.header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* Mengatur tampilan label pada bagian header. */
+.label {
+    color: var(--wine);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Mengatur tampilan judul utama. */
+.header h1 {
+    color: var(--navy);
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Mengatur tampilan teks deskripsi di bawah judul. */
+.subtitle {
+    color: var(--abu);
+
+    font-size: 15px;
+}
+
+
+/* Mengatur tampilan area input untuk menambahkan tugas. */
+.input-area {
+    display: flex;
+
+    gap: 10px;
+
+    padding: 8px;
+
+    background-color: var(--putih);
+
+    border:
+        1px solid
+        var(--garis);
+
+    border-radius: 14px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Mengatur tampilan kolom input tugas. */
+.input-area input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 12px;
+
+    background-color: transparent;
+
+    color: var(--teks);
+
+    font-family: inherit;
+
+    font-size: 15px;
+}
+
+
+/* Mengatur warna tulisan petunjuk pada kolom input. */
+.input-area input::placeholder {
+    color: var(--abu);
+}
+
+
+/* Mengatur tampilan tombol untuk menambahkan tugas. */
+#btnTambah {
+    border: none;
+
+    padding:
+        12px 22px;
+
+    border-radius: 10px;
+
+    background-color:
+        var(--burgundy);
+
+    color: var(--putih);
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* Mengubah warna tombol ketika kursor berada di atasnya. */
+#btnTambah:hover {
+    background-color:
+        var(--wine);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* Mengatur tampilan pesan peringatan. */
+.warning {
+    min-height: 20px;
+
+    margin:
+        8px 5px 20px;
+
+    color: var(--wine);
+
+    font-size: 13px;
+}
+
+
+/* Mengatur tampilan bagian jumlah tugas. */
+.statistik {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Mengatur tampilan setiap kartu statistik. */
+.stat-card {
+    text-align: center;
+
+    padding:
+        18px 10px;
+
+    background-color:
+        var(--putih);
+
+    border:
+        1px solid
+        var(--garis);
+
+    border-radius: 14px;
+}
+
+
+/* Mengatur tampilan tulisan pada kartu statistik. */
+.stat-card span {
+    display: block;
+
+    color: var(--abu);
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Mengatur tampilan angka pada kartu statistik. */
+.stat-card strong {
+    color: var(--navy);
+
+    font-size: 24px;
+}
+
+
+/* Mengatur jarak pada bagian daftar tugas. */
+.bagian-tugas {
+    margin-top: 10px;
+}
+
+
+/* Mengatur jarak antara judul dan daftar tugas. */
+.judul-daftar {
+    margin-bottom: 15px;
+}
+
+
+/* Mengatur tampilan judul daftar tugas. */
+.judul-daftar h2 {
+    color: var(--navy);
+
+    font-size: 21px;
+}
+
+
+/* Menghilangkan tanda bullet pada daftar tugas. */
+#daftarTugas {
+    list-style: none;
+}
+
+
+/* Mengatur tampilan setiap tugas. */
+#daftarTugas li {
+    display: flex;
+
+    align-items: center;
+
+    background-color:
+        var(--putih);
+
+    padding:
+        15px 18px;
+
+    margin-bottom: 10px;
+
+    border-left:
+        4px solid
+        var(--wine);
+
+    border-radius: 10px;
+
+    color: var(--teks);
+
+    transition: 0.2s;
+}
+
+
+/* Menggeser tugas sedikit ketika kursor berada di atasnya. */
+#daftarTugas li:hover {
+    transform:
+        translateX(3px);
+
+    border-left-color:
+        var(--burgundy);
+}
+
+
+/* Mengatur ukuran dan tampilan checkbox pada setiap tugas. */
+#daftarTugas li
+input[type="checkbox"] {
+    width: 18px;
+
+    height: 18px;
+
+    margin-right: 12px;
+
+    accent-color:
+        var(--burgundy);
+
+    cursor: pointer;
+}
+
+
+/* Mengatur posisi dan tampilan teks tugas. */
+#daftarTugas li span {
+    flex: 1;
+
+    margin-right: 15px;
+
+    word-break: break-word;
+}
+
+
+/* Mengubah warna teks ketika tugas sudah selesai. */
+#daftarTugas li.completed {
+    color: var(--abu);
+}
+
+
+/* Memberikan garis coret pada tugas yang sudah selesai. */
+#daftarTugas li.completed span {
+    text-decoration:
+        line-through;
+}
+
+
+/* Mengatur tampilan tombol hapus pada setiap tugas. */
+#daftarTugas li button {
+    border: none;
+
+    padding:
+        7px 12px;
+
+    border-radius: 8px;
+
+    background-color:
+        var(--burgundy);
+
+    color: var(--putih);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* Mengubah warna tombol hapus ketika kursor berada di atasnya. */
+#daftarTugas li button:hover {
+    background-color:
+        var(--wine);
+}
+
+
+/* Mengatur tampilan pesan ketika belum ada tugas. */
+#pesanKosong {
+    text-align: center;
+
+    color: var(--abu);
+
+    font-size: 14px;
+
+    padding:
+        25px 10px;
+}
+
+
+/* Mengatur tampilan teks pada bagian footer. */
+.footer {
+    text-align: center;
+
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-size: 13px;
+
+    margin-top: 20px;
+}
+
+
+/* Mengatur tampilan halaman agar responsif pada layar HP. */
+@media (max-width: 600px) {
+
+    /* Mengurangi padding dan margin kartu pada layar HP. */
+    .todo-card {
+        padding:
+            25px 20px;
+
+        margin:
+            10px auto;
+    }
+
+
+    /* Mengecilkan ukuran judul pada layar HP. */
+    .header h1 {
+        font-size: 30px;
+    }
+
+
+    /* Mengubah posisi input dan tombol menjadi vertikal. */
+    .input-area {
+        flex-direction: column;
+    }
+
+
+    /* Membuat tombol tambah memenuhi lebar kartu. */
+    #btnTambah {
+        width: 100%;
+    }
+
+
+    /* Mengubah statistik menjadi satu kolom. */
+    .statistik {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    /* Menyesuaikan tampilan daftar tugas pada layar HP. */
+    #daftarTugas li {
+        padding: 13px;
+
+        align-items:
+            flex-start;
+    }
+}

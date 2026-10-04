@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My To Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <main class="todo-card">
+
+            <!-- BAGIAN JUDUL -->
+            <header class="header">
+
+                <p class="label">DAILY PLANNER </p>
+
+                <h1>To Do List Futriani</h1>
+
+                <p class="subtitle">
+                    Yuk Mulai Produktif
+                </p>
+
+            </header>
+
+
+            <!-- BAGIAN INPUT TUGAS -->
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="inputTugas"
+                    placeholder="Tambahkan tugas baru..."
+                    autocomplete="off"
+                >
+
+                <button id="btnTambah">
+                    Tambah
+                </button>
+
+            </div>
+
+
+            <!-- PESAN JIKA INPUT KOSONG -->
+            <p id="pesanPeringatan" class="warning"></p>
+
+
+            <!-- JUMLAH TUGAS -->
+            <section class="statistik">
+
+                <div class="stat-card">
+                    <span>Total Tugas</span>
+                    <strong id="totalTugas">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Selesai</span>
+                    <strong id="tugasSelesai">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Belum Selesai</span>
+                    <strong id="tugasBelum">0</strong>
+                </div>
+
+            </section>
+
+
+            <!-- DAFTAR TUGAS -->
+            <section class="bagian-tugas">
+
+                <div class="judul-daftar">
+                    <h2>Daftar Tugas</h2>
+                </div>
+
+                <ul id="daftarTugas"></ul>
+
+                <p id="pesanKosong">
+                    Belum ada tugas. Tambahkan tugas pertamamu.
+                </p>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <p>
+                Personal To-Do List
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
